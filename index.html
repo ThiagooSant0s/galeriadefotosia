@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*Estio para efeito de carregaento*/
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite; /*Safari*/
+            animation: spin 2s linear infinite;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        @-webkit-keyframes spin {
+            0% {-webkit-transform: rotate(0deg);}
+            100% {-webkit-transform: rotate(360deg);}
+        }
+
+        @keyframes spin {
+            0% {transform:rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Login</h1>
+        <form onsubmit="return validateLogin()" class="formLogin">
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autofocus="true" required>
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <a href="/">Esqueci minha senha</a>
+            <button type="submit" value="Acessar" class="btn">Entrar</button>
+            <div id="loader" class="loader" style="display: none;"></div> <!--Elemento para o efeito de carregamento-->
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            //exibe o efeito de carregamento 
+            document.getElementById("loader").style.display = "block";
+
+            // Verifique se o e-mail e a senha são válidos
+            if (email === "comercialthiagoo@gmail.com" && password === "senha123") {
+                // simula um atraso de 2 segundos antes de redirecionar 
+                setTimeout(function() {
+                    window.location.href ="telaPrincipal.html";
+                },2000);
+                return false; //impede o envio do formulário
+            }else {
+                //exibe uma mensagem de erro se as credenciais forem invalidas
+                alert("Credenciais inválidas.Por favor tente novamente.");
+                document.getElementById("loader").style.display = "none"; //oculta  efeito de carregamento
+                return false; //impede o envio do formulario
+            }
+
+        }
+             
+    </script>
+</body>
+</html>
