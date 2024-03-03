@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/background.png');
+    color: #F2F2F2;
+}
+
+.navbar {
+    background-color: #0D0D0D;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-list li {
+    display: inline;
+
+    
+}
+
+.nav-list li a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.nav-list li a:hover {
+    background-color: #5d00ff;
+    transform: scale(1.1);
+
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #BFBFBF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  0 0 10px #5d00ff;
+    color: #0D0D0D;
+    
+}
+
+.container h1 {
+    text-align: center;
+    color: #5d00ff;
+}
+
+.container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+form {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], 
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0D0D0D;
+    box-sizing: border-box;
+    outline: none;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #5d00ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    width: 30%;
+}
+
+form button:hover {
+    background-color: #6311ED;
+    transform: scale(1.1);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+    <link rel="stylesheet" href="estilos/styleContato.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="telaPrincipal.html">Página inicial</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container"> <!--COMEÇO DO CONTAINER-->
+        <h1>Entre em contato</h1>
+
+        <p>Se você tem alguma ideia ou sugestão para melhorar este site, <br> 
+            ou apenas quer me falar algo , fique a vontade para mandar sua mensagem abaixo. <br>
+            Vou adorar trocar ideias com você! 🙋‍♂️ </p>
+
+            <form action="#" method="post"> <!--COMEÇO DO FORMULÁRIO-->
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="text" id="text" placeholder="Digite seu nome" required autofocus="true">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit" value="enviar">Enviar</button>
+
+            </form> <!--FIM DO FORMULÁRIO-->
+
+    </div> <!--FIM DO CONTAINER-->
+</body>
+</html>
